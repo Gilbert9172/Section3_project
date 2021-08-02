@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/buy/test/cal">
+        <h3> ========================</h3>
+        <h1> 장바구니 </h1>
+        <h3> ========================</h3>
+        <h5> 상품갯수를 입력해주세요!</h5>
+        <input type="text" name="num">
+        <button type="submit">갯수 선택!</button>
+    </form>
+    <div>
+        <p>
+            {% if num == None %}
+                <h5> 정확히 입력해주세요! </h5>
+            {% elif num > 5 %}
+                <p> 인당 5개까지만 판매합니다 ㅠ.ㅠ </p>
+            {% else %}
+                <p> 상품 {{num}}개를 선택하셨습니다.</p>
+                <input type="submit" value="구매 완료" onclick="alert('구매 성공! 감사합니다 ^_^')" />
+            {% endif %}
+            <h3> ========================</h3>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src = 'http://coop.cbnu.ac.kr/files/attach/images/196/301/007/ba208815c7d893263f43dea905303b3a.JPG'>
+    <h3> ========================</h3>
+    <h3> <1번 : 인절미 통팥파이></h3>
+    <h3><2번 : 치즈소시지 페스츄리></h3>
+    <h3><3번 : 정통크라상></h3>
+    <h3><4번 : 돌돌말린 소시지도넛></h3>
+    <h3><5번 : 치즈감자봉></h3>
+    <h3><6번 : 새우 감자봉></h3>
+    <h3><7번 : 에그타르트></h3>
+    <h3><8번 : 호두듬뿍타르트></h3>
+    <form method="POST" action="/buy/calculate">
+    <h3> ========================</h3>
+        <h1> 장바구니 </h1>
+        <h5> 상품번호를 입력해주세요!.</h5>
+        <input type="text" name="num">
+        <button type="submit">상품 선택!</button>	
+    </form>
+    <div>
+        <p>
+            {% if num == None %}
+                <h5> 정확히 입력해주세요! </h5>
+            {% elif num > 8 %}
+                <h5> 존재하지 않는 상품입니다. </h5>
+            {% else %}
+                <p>{{num}}번 상품이 선택되었습니다.</p>
+            {% endif %}
+        </p>
+    </div>
+	<button type="submit"><a = href="/buy/test">상품개수 선택하기!!</a>
+	</button>
+    <h3> ========================</h3>
+	
+</body>
+</html>

@@ -1,0 +1,1 @@
+web: gunicorn --worker=2 'gstore:create_app()'
