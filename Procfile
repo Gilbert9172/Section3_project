@@ -1,1 +1,1 @@
-web: gunicorn --worker=2 'gstore:create_app()'
+web: gunicorn --workers=2 'gstore:create_app()'

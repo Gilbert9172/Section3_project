@@ -6,6 +6,7 @@ BASE_DIR = os.path.dirname(__file__)
 
 # 데이터베이스 접속 주소
 # pybo.db라는 데이터베이스 파일을 프로젝트의 루트 디렉터리에 저장하려는 것.
+
 # SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URI') # 배포한 상태에선 os가 해로쿠주소
 SQLALCHEMY_DATABASE_URI = 'sqlite:///{}'.format(os.path.join(BASE_DIR, 'gstore.db'))
 # 
